@@ -30,7 +30,7 @@ sqlc generate
 ```sql
 -- name: AddAccountBalance :one
 UPDATE accounts
-SET balance = balance + sqlc.arg(amount)  -- specific name, if use $2 will be balance
+SET balance = balance + sqlc.arg(amount) -- specific name, if use $2 will be balance
 WHERE id = sqlc.arg(id)
 RETURNING *;
 ```
@@ -55,6 +55,12 @@ go get github.com/lib/pq
 
 ```shell
 go get github.com/stretchr/testify
+```
+
+### mock
+
+```shell
+mockgen 
 ```
 
 ## postgres
